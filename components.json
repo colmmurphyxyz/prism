@@ -1122,6 +1122,10 @@
 			"require": "clike",
 			"owner": "just-boris"
 		},
+		"pseudocode": {
+			"title": "Pseudocode",
+			"owner": "colmmurphyxyz"
+		},
 		"pug": {
 			"title": "Pug",
 			"require": ["markup", "javascript"],
