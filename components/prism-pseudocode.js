@@ -10,21 +10,20 @@ Prism.languages.pseudocode = {
 	},
 	'dec-integer': {
 		pattern: /[1-9]\d*|0/i,
-		lookbehind: false,
-		greedy: true,
 		alias: 'number'
 	},
 	'dec-real': {
 		pattern: /[1-9]\d*\.\d+|0\.0/,
-		greedy: false,
-		lookbehind: false,
-		greedy: true,
 		alias: 'number'
 	},
-	'keyword': /\b(?:array|downto|else|for|if|let|new|print|repeat|return|to|until|while)\b/i,
+	'keyword': /\b(?:a|array|be|downto|else|for|if|let|new|print|repeat|return|to|until|while)\b/i,
+	'function': {
+		pattern: /\b[a-zA-Z$][a-zA-Z0-9'\-_^${}\\]*(?=\()/,
+		lookbehind: false
+	},
 	'boolean': /\b(?:true|false|nil)\b/i,
 	'operator': /[-+=\*]=?|!=|\^|<[<=>]?|>[=>]?|\\\\=?|and|or|not|xor/,
-	'punctuation': /[;(),]/
+	'punctuation': /[;()\[\],]/
 };
 
 Prism.languages.pc = Prism.languages.pseudocode;
